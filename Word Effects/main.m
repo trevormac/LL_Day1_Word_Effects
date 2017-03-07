@@ -39,10 +39,10 @@ int main(int argc, const char * argv[]) {
         
         //4.Canadianize
         char inputCharsD[255];
-        printf("Now please give me a number and I'll Canadianize it: \n");
+        printf("Now say something and I'll Canadianize it: \n");
         fgets(inputCharsD, 255, stdin);
         NSString *textInputD = [NSString stringWithUTF8String:inputCharsD];
-        NSLog(@"%@, eh!", textInputD);
+        NSLog(@"%@ ,eh!", textInputD);
         
         //5.Respond
         char inputCharsE[255];
@@ -63,8 +63,8 @@ int main(int argc, const char * argv[]) {
         fgets(inputCharsF, 255, stdin);
         NSString *textInputF = [NSString stringWithUTF8String:inputCharsF];
         if ([textInputF containsString:@" "]) {
-            [textInputF stringByReplacingOccurrencesOfString:@" " withString:@"-"];
-            NSLog(@"%@", textInputF);
+            NSString *dashed = [textInputF stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+            NSLog(@"%@", dashed);
         }
         
         
