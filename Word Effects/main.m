@@ -11,7 +11,9 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        
+        int x = 1;
+        while (x == 1){
+            
         //1. Uppercase
         char inputCharsA[255];
         printf("Hello, please give me your name and I'll convert it to an uppercase string: \n");
@@ -65,6 +67,7 @@ int main(int argc, const char * argv[]) {
         if ([textInputF containsString:@" "]) {
             NSString *dashed = [textInputF stringByReplacingOccurrencesOfString:@" " withString:@"-"];
             NSLog(@"%@", dashed);
+        }
         }
         
         
