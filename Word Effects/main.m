@@ -29,6 +29,47 @@ int main(int argc, const char * argv[]) {
         NSString *lowerCTextInput = [textInputB lowercaseString];
         NSLog(@"%@", lowerCTextInput);
         
+        //3.Numberize
+        char inputCharsC[255];
+        printf("Now please give me a number and I'll convert it to an integer: \n");
+        fgets(inputCharsC, 255, stdin);
+        NSString *textInputC = [NSString stringWithUTF8String:inputCharsC];
+        NSInteger *stringToNum = [textInputC integerValue];
+        NSLog(@"%l", stringToNum);
+        
+        //4.Canadianize
+        char inputCharsD[255];
+        printf("Now please give me a number and I'll Canadianize it: \n");
+        fgets(inputCharsD, 255, stdin);
+        NSString *textInputD = [NSString stringWithUTF8String:inputCharsD];
+        NSLog(@"%@, eh!", textInputD);
+        
+        //5.Respond
+        char inputCharsE[255];
+        printf("Now you can say anything eg. ask me a question, yell at me, whatever: \n");
+        fgets(inputCharsE, 255, stdin);
+        NSString *textInputE = [NSString stringWithUTF8String:inputCharsE];
+        if ([textInputE containsString:@"?"]) {
+            NSLog(@"I don't know");
+        }else if ([textInputE containsString:@"!"]) {
+            NSLog(@"Whoa, calm down!");
+        } else {
+            NSLog(@"%@", textInputE);
+        }
+        
+        //6.De-Space-It
+        char inputCharsF[255];
+        printf("Now you can say anything and I'll convert the whitespaces to dashes: \n");
+        fgets(inputCharsF, 255, stdin);
+        NSString *textInputF = [NSString stringWithUTF8String:inputCharsF];
+        if ([textInputF containsString:@" "]) {
+            [textInputF stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+            NSLog(@"%@", textInputF);
+        }
+        
+        
+        
+        
     }
         return 0;
 }
